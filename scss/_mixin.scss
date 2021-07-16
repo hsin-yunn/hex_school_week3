@@ -51,3 +51,10 @@
     margin-right: 0;
   }
 }
+
+@mixin ts($duration: 0.2s, $target: all) {
+  transition: $target $duration;
+  -ms-transition: $target $duration;
+  -moz-transition: $target $duration;
+  -webkit-transition: $target $duration;
+}
