@@ -1,0 +1,68 @@
+@import 'reset';
+@import 'mixin';
+@import 'variables';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mt-12 {
+  @include auto_margin_top(48px);
+}
+.mt-10 {
+  @include auto_margin_top(40px);
+}
+.mt-8 {
+  @include auto_margin_top(32px);
+}
+.mt-6 {
+  @include auto_margin_top(24px);
+}
+.mt-5 {
+  @include auto_margin_top(20px);
+}
+.mt-4 {
+  @include auto_margin_top(20px);
+}
+.mt-2 {
+  @include auto_margin_top(8px);
+}
+.mt-1 {
+  @include auto_margin_top(4px);
+}
+.title {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.title-sm {
+  font-size: 4rem;
+  line-height: 2;
+}
+.text {
+  font-size: 1.5rem;
+}
+.text-sm {
+  font-size: 1.25rem;
+}
+.text-sm-2 {
+  font-size: 1.25rem;
+  line-height: 2.1;
+}
+.subtitle {
+  font-size: 1.5rem;
+  line-height: 1.75;
+}
+.bold {
+  font-weight: bold;
+}
