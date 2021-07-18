@@ -668,6 +668,21 @@ img {
     }
   }
 }
+.question-list {
+  .question-list__item {
+    @include auto_margin_top(32px);
+    .question-list__item-title {
+      font-size: 1.25rem;
+      line-height: 1.2;
+      font-weight: bold;
+    }
+    .question-list__item-content {
+      padding-left: 95px;
+      white-space: pre-line;
+      font-size: 1rem;
+    }
+  }
+}
 .mt-12 {
   @include auto_margin_top(48px);
 }
