@@ -47,6 +47,13 @@ img {
   }
   &.blog {
     padding: 40px 0 160px 0;
+    @media screen and (max-width: 1199px) {
+      max-width: 100%;
+      padding: 60px 30px 96px 39px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 28px 15px 56px 15px;
+    }
   }
 }
 
@@ -392,6 +399,14 @@ img {
 }
 .paginate-wrap {
   @include auto_margin_top(36px);
+  &.mt-lg-24 {
+    @include auto_margin_top(96px);
+  }
+  &.mt-xs-10 {
+    @media screen and (max-width: 767px) {
+      @include auto_margin_top(40px);
+    }
+  }
   .paginate {
     @include flex;
     @include flex_justify(center);
@@ -401,10 +416,14 @@ img {
       &:first-child {
         border-left: 1px solid var(--gray-500);
       }
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
     }
     .paginate__item {
       padding: 12px 16px;
       font-size: 1.125rem;
+      text-align: center;
       color: var(--gray-500);
       &:hover {
         background-color: var(--gray-100);
@@ -413,7 +432,11 @@ img {
         color: var(--white);
         background-color: var(--black);
       }
+      &.ctrl-btn {
+        white-space: nowrap;
+      }
       @media screen and (max-width: 767px) {
+        padding: 10px 12px;
         font-size: 1rem;
       }
     }
@@ -718,24 +741,55 @@ img {
 }
 .blog-list {
   @include auto_margin_top(60px);
+  @media screen and (max-width: 767px) {
+    @include auto_margin_top(28px);
+  }
   .blog-list__item {
     @include flex;
     @include auto_margin_top(60px);
+    @media screen and (max-width: 1199px) {
+      @include auto_margin_top(24px);
+    }
+    @media screen and (max-width: 767px) {
+      @include auto_margin_top(20px);
+      display: block;
+      .text-button {
+        display: none;
+      }
+    }
     .blog-list__item-img {
       @include bg-img;
       width: 635px;
       height: 400px;
+      @media screen and (max-width: 1199px) {
+        width: 330px;
+        height: 208px;
+      }
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        height: 217px;
+      }
     }
     .blog-list__item-content {
       @include auto_margin_left(30px);
       @include flex;
       @include flex_justify(space-between);
       flex-direction: column;
-
+      @media screen and (max-width: 767px) {
+        @include auto_margin_top(8px);
+        margin-left: 0;
+      }
       .blog-list__item-title {
         font-size: 2rem;
         line-height: 1.4;
         color: var(--red-800);
+        @media screen and (max-width: 1199px) {
+          font-size: 1.25rem;
+          line-height: 1.5;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 1rem;
+        }
       }
       .blog-list__item-subtitle {
         @include auto_margin_top(2px);
@@ -747,15 +801,37 @@ img {
         font-weight: 500;
         vertical-align: middle;
         color: var(--black);
+        @media screen and (max-width: 1199px) {
+          font-size: 1rem;
+        }
+        @media screen and (max-width: 767px) {
+          margin-top: 0;
+          font-size: 0.875rem;
+        }
         .date {
           display: block;
           font-size: 1rem;
+          @media screen and (max-width: 1199px) {
+            font-size: 0.875rem;
+          }
         }
       }
       .blog-list__item-text {
         @include auto_margin_top(24px);
         font-size: 1.25rem;
         color: var(--gray-500);
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        @media screen and (max-width: 1199px) {
+          @include auto_margin_top(32px);
+          -webkit-line-clamp: 6;
+          font-size: 0.875rem;
+        }
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
       }
     }
   }
@@ -770,28 +846,4 @@ img {
   &:hover {
     color: var(--light-brown);
   }
-}
-.mt-12 {
-  @include auto_margin_top(48px);
-}
-.mt-10 {
-  @include auto_margin_top(40px);
-}
-.mt-8 {
-  @include auto_margin_top(32px);
-}
-.mt-6 {
-  @include auto_margin_top(24px);
-}
-.mt-5 {
-  @include auto_margin_top(20px);
-}
-.mt-4 {
-  @include auto_margin_top(20px);
-}
-.mt-2 {
-  @include auto_margin_top(8px);
-}
-.mt-1 {
-  @include auto_margin_top(4px);
 }
